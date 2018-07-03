@@ -1,0 +1,25 @@
+{
+  "name": "summerinternship",
+  "version": "1.0.0",
+  "description": "1) Create a local server on MySQL and configure application.properties",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "grunt dev",
+    "start": "http-server ./src/main/resources/static -a localhost -p 9997 -c-1 -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BiancaLuca/SummerInternship.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BiancaLuca/SummerInternship/issues"
+  },
+  "homepage": "https://github.com/BiancaLuca/SummerInternship#readme"
+}
