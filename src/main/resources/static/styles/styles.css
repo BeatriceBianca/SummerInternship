@@ -1,3 +1,8 @@
 h1 {
     text-align: center;
+    margin-bottom: 5%;
+}
+
+.homePage div {
+    margin-left: 10%;
 }
