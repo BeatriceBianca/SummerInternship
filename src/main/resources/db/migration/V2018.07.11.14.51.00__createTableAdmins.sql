@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS admins(
+user_id INT AUTO_INCREMENT,
+first_name VARCHAR(255) NOT NULL,
+last_name VARCHAR(255) NOT NULL,
+username VARCHAR(255) NOT NULL,
+contract_nr INT NOT NULL,
+password VARCHAR(255) NOT NULL,
+PRIMARY KEY(user_id)
+)

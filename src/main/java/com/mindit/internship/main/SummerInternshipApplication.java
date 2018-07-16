@@ -9,8 +9,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@ComponentScan({"com.mindit.internship.controller"})
-@EntityScan(basePackages = {"com.mindit.internship.model"})
+@ComponentScan({"com.mindit.internship.controller","com.mindit.internship.services"})
+@EnableJpaRepositories("com.mindit.internship.repositories")
+@EntityScan(basePackages = {"com.mindit.internship.models"})
 @EnableScheduling
 @Configuration
 public class SummerInternshipApplication {

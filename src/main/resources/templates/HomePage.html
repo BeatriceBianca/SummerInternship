@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="summerInternship">
+<head>
+	<title>HomePage</title>
+	<link rel="stylesheet" type="text/css" href="/styles/HomePage.css" />
+</head>
+
+<body ng-controller="homepageController">
+
+<h1>{{ title }}</h1>
+
+
+<div class="form">
+<div class = "responsive">
+	<div class = "gallery">
+		<a href="http://localhost:8090/login">
+			<img src="/images/user.png" width="600" height="400"/>
+		</a>
+		<div class="desc">USER</div>
+	</div>
+</div>
+
+<div class="responsive">
+	<div class="gallery">
+		<a href="http://localhost:8090/adminlogin">
+			<img src="images/admin.png" width="600" height="400"/>
+		</a>
+		<div class="desc">ADMIN</div>
+	</div>
+</div>
+</div>
+
+<script src="/scripts/angular.min.js"></script>
+<script src="/js/module.js"></script>
+
+<script src="/js/homepage.controller.js"></script>
+<script src="/js/homepage.service.js"></script>
+
+</body>
+
+</html>

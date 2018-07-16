@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="summerInternship">
+
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="/styles/Login.css" />
+    <script type="text/javascript" src="/js/Login.js"></script>
+</head>
+
+<body ng-controller="loginController">
+	<div class = "form">
+		<img src = "/images/avatar.png" class = "avatar"/>
+			<h1>{{ title }}</h1>
+			<form >
+				<p>Username</p>
+				<input type="text" name="" placeholder="Enter Username" ng-model = "username"/>
+				<p>Password</p>
+				<input type="password" name="" placeholder="Enter Password" id="pass" ng-model="password"/>
+				<input align="left" type="checkbox" name="" id="showPass" />Show your password
+				<input type="submit" name="" value = "Login" ng-click="login()"/>
+				<a href="http://localhost:8090/register">Don't have an account</a><br/>
+				<a href="http://localhost:8090/adminlogin">Login as an admin</a>
+				<p>{{ fail }}</p>
+			</form>
+			
+	</div>
+    <script src="/scripts/angular.min.js"></script>
+    <script src="/js/module.js"></script>
+
+    <script src="/js/login.controller.js"></script>
+    <script src="/js/login.service.js"></script>
+</body>
+
+</html>

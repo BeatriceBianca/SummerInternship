@@ -1,17 +1,17 @@
 (function() {
 
-    'use strict';
+         'use strict';
 
-    angular
-        .module('summerInternship')
-        .controller('homeController', Controller);
+         angular
+             .module('summerInternship')
+             .controller('homeController', Controller);
 
-    Controller.$inject = ['$scope', 'HomeService'];
+         Controller.$inject = ['$scope', 'HomeService'];
 
-    function Controller($scope, HomeService) {
+         function Controller($scope, HomeService) {
 
-        $scope.title = "My App for Summer Internship"
+             $scope.title = "My App for Summer Internship"
 
-    }
+         }
 
-})();
+     })();

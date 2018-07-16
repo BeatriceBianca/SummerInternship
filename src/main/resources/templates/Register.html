@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="summerInternship">
+
+<head>
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="/styles/Register.css"/>
+	<script type="text/javascript" src="/js/Register.js"></script>
+</head>
+
+<body ng-controller="registerController">
+	<div class = "form">
+		<img src = "/images/avatar.png" class = "avatar"/>
+			<h1>Registration Form</h1>
+			<form id="frm">
+                <p>First Name</p>
+                <input type="text" name="" placeholder="Enter First Name" class="usr" ng-model = "firstName"/>
+                <p>Last Name</p>
+                <input type="text" name="" placeholder="Enter Last Name" class="usr" ng-model = "lastName"/>
+				<p>Username</p>
+				<input type="text" name="" placeholder="Enter Username" class="usr" ng-model = "username"/>
+				<p>Password</p>
+				<input type="password" name="" placeholder="Enter Password" class="psd" ng-model = "password"/>
+				<input type="password" name="" placeholder="Enter Password Again" class="psd"/>
+				<input align="left" type="checkbox" name="" id="showPass" />Show your password
+				<input type="submit" name="" value = "Register" id="reg" ng-click = "addUser()"/>
+				<a href="http://localhost:8090/login">I already have an account</a>
+			</form>
+			
+	</div>
+	<script src="/scripts/angular.min.js"></script>
+	<script src="/js/module.js"></script>
+
+	<script src="/js/register.controller.js"></script>
+	<script src="/js/register.service.js"></script>
+</body>
+
+</html>
