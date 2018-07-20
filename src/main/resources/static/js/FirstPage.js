@@ -7,5 +7,7 @@ function openMenu(){
 function closeMenu(){
 	document.getElementById("sidemenu").style.width = "0";
 	document.getElementById("int").style.marginLeft = "0";
-	document.body.style.backgroundColor = "white";
+	document.body.style.backgroundColor = "#D2D7D3";
 }
+
+

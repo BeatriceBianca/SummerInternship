@@ -9,13 +9,13 @@
     <script type="text/javascript" src="/js/FirstPage.js"></script>
 </head>
 
-<body ng-controller="profilepageController">
+<body ng-controller="adminprofilepageController">
 
 <div id="sidemenu" class="side">
     <a href="javascript:void(0)" class="btn" onclick="closeMenu()">&#9754;</a>
-    <a href="http://localhost:8090/profilepage">Profile Page</a>
-    <a href="http://localhost:8090/firstpage">Dashboard</a>
-    <a href="http://localhost:8090/cart">Cart</a>
+    <a href="http://localhost:8090/adminprofilepage">Profile Page</a>
+    <a href="http://localhost:8090/adminfirstpage">Dashboard</a>
+    <a href="http://localhost:8090/order">See Orders</a>
     <a href="#">About</a>
     <a href="http://localhost:8090/home">Logout</a>
 </div>
@@ -23,8 +23,7 @@
 <div id="int">
     <div id="hdrs">
         <span class="hdr" style="font-size:30px;cursor:pointer" onclick="openMenu()">&#9776; </span>
-        <h1 class="hdr">{{ title }}</h1>
-        <button style="float: right; margin-top: 30px; margin-right: 50px;" type="button" class="btn btn-danger" ng-click="delete()">Delete Account</button>
+        <h1 class="hdr">{{ title }} [ {{ contractNr}} ]</h1>
     </div>
     <h2>{{ firstname }} {{ lastname }}</h2>
 
@@ -33,9 +32,9 @@
 <script src="/scripts/angular.min.js"></script>
 <script src="/js/module.js"></script>
 
-<script src="/js/profilePage.controller.js"></script>
+<script src="/js/adminprofilePage.controller.js"></script>
 <script src="/js/login.controller.js"></script>
-<script src="/js/profilePage.service.js"></script>
+<script src="/js/adminprofilePage.service.js"></script>
 <script src="/js/login.service.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

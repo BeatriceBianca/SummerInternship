@@ -9,8 +9,13 @@
                     return $http.put("/addUser",user);
                 }
 
+                function find(user){
+                    return $http.get("http://localhost:8090/find?username=" +user.username,null);
+                }
+
             return {
-                addUser: addUser
+                addUser: addUser,
+                find: find
             };
 
         }]);

@@ -12,19 +12,8 @@
                 return user1;
             }
 
-
-            var setValue = function (data) {
-                var temp ='';
-                temp = data;
-            };
-            var getValue = function () {
-                return user1;
-            };
-
             return {
-                login: login,
-                setValue: setValue,
-                getValue: getValue
+                login: login
             };
 
         }]);

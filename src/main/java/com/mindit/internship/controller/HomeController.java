@@ -28,4 +28,16 @@ public class HomeController {
 
     @RequestMapping(value = "/profilepage")
     public String getProfilePage() {return "profilepage";}
+
+    @RequestMapping(value = "/cart")
+    public String getCartPage() {return "/cart";}
+
+    @RequestMapping(value = "/adminfirstpage")
+    public String getAdminFirstPage() {return "/adminfirstpage";}
+
+    @RequestMapping(value = "/order")
+    public String getOrder() {return "/order";}
+
+    @RequestMapping(value = "/adminprofilepage")
+    public String getAdminProfilePage() {return "/adminprofilepage";}
 }

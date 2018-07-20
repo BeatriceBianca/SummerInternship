@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.swing.plaf.PanelUI;
 import java.util.List;
 
 @Controller
@@ -33,5 +34,19 @@ public class UsersController {
         if(l.size() == 0)
             return new ResponseEntity(null,HttpStatus.BAD_REQUEST);
         else return new ResponseEntity(l.get(0),HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public ResponseEntity deleteUser(@RequestBody Users user){
+        usersService.deleteUser(user);
+        return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+    }
+
+    @RequestMapping(value = "/find", method = RequestMethod.GET)
+    public ResponseEntity find(@RequestParam String username){
+        List<Users> u = usersService.find(username);
+        if(u.size() == 0)
+            return new ResponseEntity(null, HttpStatus.BAD_REQUEST);
+        else return new ResponseEntity(u.get(0), HttpStatus.OK);
     }
 }

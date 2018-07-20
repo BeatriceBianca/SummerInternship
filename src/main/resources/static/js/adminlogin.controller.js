@@ -19,7 +19,11 @@
             AdminLoginService
                 .login(user)
                 .then(function(response){
-                    document.location.href = "/firstpage";
+                    localStorage.setItem("ausername",response.data.username);
+                    localStorage.setItem("afirstname", response.data.firstName);
+                    localStorage.setItem("alastname", response.data.lastName);
+                    localStorage.setItem("acontractnr", response.data.contractNr);
+                    document.location.href = "/adminfirstpage";
                     console.log(response.data);
                 }, function () {
                     $scope.fail = "Username or password is incorrect!";

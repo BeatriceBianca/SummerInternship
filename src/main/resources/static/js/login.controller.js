@@ -21,7 +21,10 @@
             LoginService
                 .login(user)
                 .then(function(response){
-                    $rootScope.user1 = response.data;
+                    localStorage.setItem("username",response.data.username);
+                    localStorage.setItem("firstname", response.data.firstName);
+                    localStorage.setItem("lastname", response.data.lastName);
+                    localStorage.setItem("id", response.data.userId);
                     document.location.href = "/profilepage";
 
 

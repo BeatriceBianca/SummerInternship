@@ -1,11 +1,11 @@
 window.onload = function(){
 		var show =  document.getElementById("showPass");
 		show.onclick = function(){
-			var pass = document.getElementsByTagName("input");
+			var pass = document.getElementsByClassName("psd");
 			for(var i = 0; i < pass.length; i++){
 				if(pass[i].type == "password"){
 					pass[i].type = "text";
-				} else if(pass[i].type == "text"  && i != 0) {
+				} else if(pass[i].type == "text") {
 					pass[i].type = "password";
 			    }
 			}

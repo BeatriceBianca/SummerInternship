@@ -7,4 +7,6 @@ import java.util.List;
 public interface UsersService {
     void addUser(Users user);
     List<Users> login(String username, String password);
+    void deleteUser(Users user);
+    List<Users> find(String username);
 }

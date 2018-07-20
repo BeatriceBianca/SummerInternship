@@ -18,11 +18,20 @@
             username: $scope.username,
             password: $scope.password
         }
-        RegisterService.addUser(user)
-            .then(function(value){
-                alert("User addded");
-                document.location.href = "/login"
+
+        RegisterService.find(user)
+            .then(function (response) {
+                alert("Username already taken. Choose another one.");
+                document.location.href("/register");
+
+            }, function (reason) {
+                RegisterService.addUser(user)
+                    .then(function(value){
+                        alert("User added");
+                        document.location.href = "/login"
+                    });
             });
+
         }
     }
 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="summerInternship">
+<head>
+    <title>Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/FirstPage.css" />
+    <script type="text/javascript" src="/js/FirstPage.js"></script>
+</head>
+
+<body ng-controller="orderController">
+
+<div id="sidemenu" class="side">
+    <a href="javascript:void(0)" class="btn" onclick="closeMenu()">&#9754;</a>
+    <a href="http://localhost:8090/adminprofilepage">Profile Page</a>
+    <a href="http://localhost:8090/adminfirstpage">Dashboard</a>
+    <a href="http://localhost:8090/order">See orders</a>
+    <a href="#">About</a>
+    <a href="http://localhost:8090/home">Logout</a>
+</div>
+
+<div id="int">
+
+    <div id="hdrs">
+        <span class="hdr" style="font-size:30px;cursor:pointer" onclick="openMenu()">&#9776; </span>
+        <h1 class="hdr">{{ title }}</h1>
+    </div>
+
+    <div data-toggle="tooltip" data-placement="top" title="See more">
+
+        <div data-toggle="modal" data-target="#myModal" id="open" ng-repeat="cart in cartContent" ng-click="modal(cart)">
+            <img ng-src="/images/{{ cart.photo }}" width="200px" height="300px"/>
+            <div>{{ cart.movieName }}</div>
+            <div id="dir">{{ cart.director }}</div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg" >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{ selectedCart.movieName}}</h4>
+            </div>
+
+            <div class="modal-body" id = "mbdy">
+
+                <div class= "dv">
+                    <img ng-src="/images/{{ selectedCart.photo }}" width="200px" height="300px"/>
+                </div>
+
+                <div class = "dv" style="height: 300px; width: 350px;">
+                    <h4><span class="label label-success">Price: {{selectedCart.price}}</span></h4>
+                    <h3>Summary:</h3>
+                    <p>{{selectedCart.description}}</p>
+                    <h4><span class="label label-danger">Genre: {{selectedCart.genre}}</span></h4>
+                    <h4><span class="label label-info">Ordered By: {{selectedCart.userName}}</span></h4>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="/scripts/angular.min.js"></script>
+<script src="/js/module.js"></script>
+
+<script src="/js/order.controller.js"></script>
+<script src="/js/login.controller.js"></script>
+<script src="/js/order.service.js"></script>
+<script src="/js/login.service.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

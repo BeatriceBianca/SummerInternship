@@ -22,4 +22,12 @@ public class UsersServiceImpl implements UsersService {
        return usersRepository.findByUsernameAndPassword(username, password);
 
     }
+
+    public void deleteUser(Users user){
+        usersRepository.delete(user);
+    }
+
+    public List<Users> find(String username){
+        return usersRepository.findByUsername(username);
+    }
 }
